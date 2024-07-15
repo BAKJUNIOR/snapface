@@ -1,0 +1,21 @@
+<div class="face-snap-card">
+
+<h2>{{faceSnap.title}}</h2>
+
+  <p *ngIf="faceSnap.location; else noLocation">
+    Localisation : {{ faceSnap.location }}
+  </p>
+  <ng-template #noLocation>
+    <p>Localisation non spécifiée</p>
+  </ng-template>
+
+<p>Mise en ligne le{{faceSnap.createdAt}}</p>
+<img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+<p>{{faceSnap.description}} ...</p>
+
+<p>
+  <button (click)="onlike()">{{likeButtonText}}</button>
+  {{faceSnap.like}} 👍 ...
+</p>
+
+</div>

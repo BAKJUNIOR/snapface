@@ -1,0 +1,10 @@
+.face-snap-card {
+  width: 35%;
+}
+.face-snap-card img{
+  width: 55%;
+}
+.face-snap-card button{
+  width: 70px;
+  font-size: 13px;
+}
