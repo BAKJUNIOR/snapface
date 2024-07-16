@@ -29,3 +29,13 @@ button:active {
    transform: translate(1px, 1px);
    box-shadow: lightgray 0 0 5px;
   }
+
+.snapped {
+button {
+  box-shadow: lightgreen 5px 5px 9px;
+  color: darkgreen;
+&:active {
+   box-shadow: lightgreen 0 0 5px;
+ }
+}
+}
