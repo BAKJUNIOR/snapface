@@ -6,3 +6,18 @@ body{
 padding: 0px;
   margin: 0px;
 }
+
+button {
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: none;
+  box-shadow: #ffffff 6px 6px 10px;
+  margin-right: 20px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;}
+button:active {
+  transform: translate(1px, 1px);
+  box-shadow: lightgray 0 0 5px;
+}

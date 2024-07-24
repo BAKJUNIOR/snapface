@@ -1,35 +1,5 @@
-<div class="face-snap-card" [ngClass]="{ 'snapped': userHasSnapped }">
-  <h1 style="font-size: 11px">{{myLargeNumber | number}}</h1>
+<div class="face-snap-card">
   <!-- Interpolation pour le titre -->
-  <h2 style="font-size: 20px">{{ faceSnap.title | uppercase }}    {{ 344.36 | currency: 'FCFA' : 'code' : '1.0-1' | lowercase }}</h2> <span></span>
-
-  <!-- Directive conditionnelle *ngIf pour vérifier si la localisation est définie -->
-  <p *ngIf="faceSnap.location; else noLocation">
-    <!-- Interpolation pour la localisation -->
-    Localisation : {{ faceSnap.location }}
-  </p>
-
-  <!-- ng-template utilisé pour afficher un message alternatif si la localisation n'est pas définie -->
-  <ng-template #noLocation>
-    <p>Localisation non spécifiée</p>
-  </ng-template>
-
-  <!-- Interpolation avec un pipe pour formater la date -->
-  <p>FaceSnap créée le {{ faceSnap.createdAt | date: 'd MMMM yyyy, à HH:mm' }}</p>
-  <!-- Binding d'attributs pour l'image -->
-  <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
-
-  <!-- Interpolation pour la description -->
-  <p>{{ faceSnap.description }} ...</p>
-
-  <!-- Binding d'événements pour réagir aux clics sur le bouton -->
-  <p>
-    <button (click)="onlike()">{{ likeButtonText }}</button>
-    <!-- Interpolation pour le nombre de likes -->
-    <span [ngStyle]="{ color: 'rgb(0, ' + faceSnap.like + ', 0)' }"> {{ faceSnap.like }} 👍 ... </span>
-  </p>
-
-  <strong>
-      {{myPourcentage | percent}}
-  </strong>
+  <h2 style="font-size: 20px">{{ faceSnap.title | uppercase }}  </h2>
+<button (click)="onViewFaceSnap()">VIEW</button>
 </div>
